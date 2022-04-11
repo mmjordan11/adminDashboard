@@ -66,7 +66,8 @@ a {
   --logo-text-size: 2rem;
   --standard-gap: 1rem;
   --large-text: 1.5rem;
-  --nav-icon-size: calc(var(--large-text)*1.5);
+  --nav-icon-size: calc(var(--large-text));
+  --header-text-color: #000;
 }
 
 
@@ -75,15 +76,20 @@ a {
   width: 100vw;
   display: grid;
   grid-template-columns: 275px 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "sidebar header"
     "sidebar content"
 }
 
 header {
-  background-color: #ddd;
+  padding: var(--standard-gap) 40px;
   grid-area: header;
+  display: grid;
+  grid-template-rows: 2fr 3fr;
+  align-content: center;
+  gap: var(--standard-gap);
+  color: var(--header-text-color);
 }
 
 .sidebar {
@@ -122,6 +128,7 @@ font-weight: 600;
 
 .pages,
 .support {
+  padding: 0 10px;
   display: grid;
   gap: var(--standard-gap);
 }
@@ -142,4 +149,88 @@ font-weight: 600;
 .support-item-icon {
   height: var(--nav-icon-size);
   width: auto;
+}
+
+header svg path {
+  fill: var(--header-text-color);
+}
+
+.header-topRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  align-items: center;
+  gap: var(--standard-gap);
+}
+
+.header-topRow > input[type=search] {
+  width: 75%;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--gray);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+}
+
+.header-icon {
+  height: var(--nav-icon-size);
+  width: auto;
+  color: #000;
+}
+
+.sqrTallImg {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--blue);
+}
+
+.sqrTallImg.xs {
+  height: 3rem;
+  width: 3rem;
+}
+
+.sqrTallImg.sm {
+  height: 4rem;
+  width: 4rem;
+}
+
+.profileImg {
+  height: auto;
+  width: 100%;
+  margin-top: -10px;
+}
+
+.header-topRow > .username {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.header-bottomRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  align-items: center;
+  gap: var(--standard-gap);
+}
+
+.welcomeMsg-text,
+.welcomeMsg-username {
+  font-weight: 500;
+}
+
+.welcomeMsg-text {
+  font-size: .9rem;
+}
+
+.welcomeMsg-username {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: .6rem 0;
+  width: 100px;
 }
