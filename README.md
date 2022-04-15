@@ -12,3 +12,4 @@ Admin Dashboard project from The Odin Project to practice CSS Grid
 2. I learned a lot more about some new features in grid (ie: minmax, min-content, max-content, clamp, auto-fit & auto-fill).
 3. Commit early and often!
 4. I feel confident that given a page design, I can recreate it with HTML & CSS.
+5. Sticky with grid requires containers for the sticky elements because the first element in the grid is the same size as the container and therefore will not stick.
